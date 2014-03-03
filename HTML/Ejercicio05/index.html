@@ -1,0 +1,83 @@
+﻿<html>
+<head>
+    <title>Información del producto</title>
+    <meta charset = "utf-8" />
+
+</head>
+<body>
+
+    <form action="./process.php" method="POST" enctype="multipart/form-data">
+
+        <h1>Información sobre el producto</h1>
+        <fieldset>
+
+            <legend>Datos básicos</legend>
+
+            <label for ="idnombre">Nombre</label>
+            <br/>
+            <input type="text" value="" name="nombre" id="idnombre">
+            <br/>
+            <label for ="idapellidos">Apellidos</label>
+            <br/>
+            <input type="text" value="" name="apellidos" id="idapellidos">
+            <br/>
+            <label for ="idpass">Clave</label>
+            <br/>
+            <input type="password" value="" name="password" id="idpass">
+            <br/>
+            <label for ="iddescripcion">Descripción</label>
+            <br/>
+            <textarea cols="40" rows="5" value="" name="descripcion" id="iddescripcion"></textarea>
+            <br/>
+
+            <label for ="foto">Foto</label>
+            <br/>
+            <input type="file" name="foto" id="foto">
+            <br/>
+            <input type="checkbox" name="contador" value="true" id="idcontador">
+            <label for ="idcontador">Añadir contador de visitas</label>
+
+        </fieldset>
+        <br/>
+        <fieldset>
+
+            <legend>Datos económicos</legend>
+
+            <label for ="idprecio">Precio</label>
+
+            <input type="text" value="" name="precio" id="idprecio" maxlength="4" >
+                              <label for ="idprecio">€</label>
+
+                         <label for ="idimpuestos">Impuestos</label>
+            <select name="impuestos" id="idimpuestos">
+                <optgroup label="IVA">
+                      <option value="4">4%</option>
+                    <option value="10">10%</option>
+                    <option value="21">21%</option>
+                           </optgroup>
+                <optgroup label="Sociedades">
+                    <option value="42">42%</option>
+                </optgroup>
+
+                     </select>
+
+            <br/>
+            <span for ="">Promocion</span>
+            <br/>
+            <input type="radio" value="ninguno" name="descuento" id="idpromoninguno" checked>
+            <label for ="idpromoninguno">Ninguno</label>
+            <br/>
+            <input type="radio" value="transporte" name="descuento" id="idpromotransporte">
+            <label for ="idpromotransporte">Transporte</label>
+            <br/>
+            <input type="radio" value="descuento5" name="descuento" id="idpromo5">
+            <label for ="idpromo5">Descuento 5%</label>
+            <br/>
+
+        </fieldset>
+
+        <input type="submit" name="enviar" value="Enviar">
+        <input type="reset" name="reset" value="Restablecer"></form>
+
+</body>
+</html>
