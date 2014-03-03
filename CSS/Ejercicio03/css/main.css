@@ -1,0 +1,58 @@
+li:first-child, li:last-child{
+color: #00F;
+}
+
+li:nth-child(3) 
+{
+    font-size: 1.5em;
+}
+li:nth-child(4) 
+{
+    font-size: 2em;
+}
+li:nth-child(5) 
+{
+    font-size: 3em;
+}
+
+li:nth-child(2n+1):not(.last)
+{
+    background-color: #888;
+}
+
+li:nth-child(2n)
+{
+    background-color: #88F;
+}
+li:last-child{
+    background-image: linear-gradient( to bottom, #F77, #FCC ); 
+    -moz-color: #939;
+    -webkit-color: #884;
+}
+
+
+
+li:nth-child(2n+1):hover
+{
+    background-color: #333;
+    color: #FAA;
+}
+
+li:nth-child(2n):hover
+{
+    background-color: #AAA;
+    color:#F33;
+}
+
+li:last-child:hover{
+    background-image: linear-gradient( to bottom, #7F7, #CFC ); 
+    color: #747;
+}
+li:first-child:hover{
+    background-image: linear-gradient( to bottom, #77F, #CCF ); 
+    color: #747;
+}
+
+ul{
+    width: 50%;
+}
