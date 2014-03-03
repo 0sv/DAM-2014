@@ -1,0 +1,36 @@
+p{
+  text-shadow: 0.1em 0.1em 0.2em #343434;
+
+}
+
+p:nth-child(2n)
+{
+   text-shadow: 0.1em 0.1em 0.2em #FF3434;
+}
+p:nth-child(2n+1)
+{
+   text-shadow: 0.1em 0.1em 0.2em #34FF34;
+}
+
+@font-face {
+    font-family: 'Kindergarten';
+    src:  url('../fonts/Kindergarten.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Misery';
+    src:  url('../fonts/MiseryLovesCompanyDEMO.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+p:nth-child(2n+1){
+  font-family: "Misery"
+}
+
+p:nth-child(2n){
+  font-family: "Kindergarten"
+}
+

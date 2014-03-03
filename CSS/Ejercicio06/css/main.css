@@ -2,6 +2,8 @@ body  {
     /*width: 500px;
     height: 250px;*/
     background-image: url(../img/ribbon.png), url(../img/decoration.png), url(../img/old_paper.jpg);
+    /*background-image: url(../img/old_paper.jpg);*/
+    /*background-size: contain;*/
     background-position: right bottom, left top, center bottom;
     background-repeat: no-repeat;
 }
