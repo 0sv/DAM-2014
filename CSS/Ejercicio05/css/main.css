@@ -1,29 +1,37 @@
    div.exampleboxshadowa {
-    box-shadow: -10px -5px 0px 3px #cdcdcd;
+    box-shadow: -10px -5px 0px 3px #777;
  } 
  div.exampleboxshadowb {
-     box-shadow: -10px -5px 10px 3px #cdcdcd;
+     box-shadow: -10px -5px 10px 3px #777;
  } 
  div.exampleboxshadowc {
-     box-shadow: -5px -5px 0px 5px #cdcdcd;
+     box-shadow: -5px -5px 0px 5px #777;
  } 
  div.exampleboxshadowd {
-     box-shadow: -5px -5px 10px 5px #cdcdcd;
+     box-shadow: -5px -5px 10px 5px #777;
  } 
  div.exampleboxshadowe {
-    box-shadow: inset 0px 0px 10px 5px black;
+   box-shadow:  0px 0px 1px 2px #777;
  } 
  div.exampleboxshadowf {
+  
+    box-shadow:  0px 0px 10px 5px #777;
  } 
  div.exampleboxshadowg {
+     box-shadow: inset -8px -8px 0px 2px #777;
  } 
  div.exampleboxshadowh {
+     box-shadow: inset -8px -8px 5px 2px #777;
  } 
  div.exampleboxshadowi {
+     box-shadow: inset -10px -10px 0px 10px #777;
  } 
  div.exampleboxshadowj {
+    box-shadow: inset -10px -10px 10px 10px #777;
  } 
  div.exampleboxshadowk {
+    box-shadow: inset 0px 0px 1px 2px #777;
  } 
  div.exampleboxshadowl {
+      box-shadow: inset 0px 0px 10px 5px #777;
  }
