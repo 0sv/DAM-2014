@@ -1,0 +1,161 @@
+ body {
+            margin: 0px;
+        }
+        #container{
+            background: #666 url(../img/ej03_tree.jpg) no-repeat -60px 0;
+            width: 420px;
+            height: 480px;
+            position: relative;
+        }
+        .snowflake {
+            color: #fff;
+            font-size: 2em;
+            position: absolute;
+        }
+        .snowflake.f1 {
+            left: 40px;
+        }
+        .snowflake.f2 {
+            font-size: 1.8em;
+            left: 120px;
+        }
+        .snowflake.f3 {
+            left: 200px;
+        }
+        .snowflake.f4 {
+            font-size: 1.5em;
+            left: 280px;
+        }
+
+        .f1 {
+     -webkit-animation-duration: 30s,15s;
+     -webkit-animation-name: drop1 , swing;
+     -webkit-animation-iteration-count: infinite; 
+
+     
+}
+        .f2 {
+     -webkit-animation-duration: 20s,5s;
+     -webkit-animation-name: drop2 , swing;
+     -webkit-animation-iteration-count: infinite; 
+
+     
+}
+        .f3 {
+     -webkit-animation-duration: 35s,25s;
+     -webkit-animation-name: drop3 , swing;
+     -webkit-animation-iteration-count: infinite; 
+
+     
+}
+        .f4 {
+     -webkit-animation-duration: 25s,10s;
+     -webkit-animation-name: drop4 , swing;
+     -webkit-animation-iteration-count: infinite; 
+
+     
+}
+
+
+@-webkit-keyframes swing {
+    from {
+       
+      
+         margin-left: 0px;
+    }
+ 25% {
+    margin-left: 20px;
+}
+
+50% {
+    margin-left: 0px;
+}
+
+75% {
+    margin-left: -20px;
+}
+    to {
+        
+        
+        margin-left: 0px;
+    }
+
+    
+
+
+}
+    
+
+@-webkit-keyframes drop1 {
+    from {
+       
+       margin-top: 0px;
+      opacity: 1;
+    }
+    95% {
+    opacity: 0.9%;
+    }
+    to {
+        
+        margin-top: 450px;
+         opacity: 0;
+        
+    }
+
+}
+
+
+@-webkit-keyframes drop2 {
+    from {
+       
+       margin-top: 0px;
+      opacity: 1;
+    }
+    95% {
+    opacity: 0.9%;
+    }
+    to {
+        
+        margin-top: 450px;
+         opacity: 0;
+        
+    }
+
+}
+
+@-webkit-keyframes drop3 {
+    from {
+       
+       margin-top: 0px;
+      opacity: 1;
+    }
+    95% {
+    opacity: 0.9%;
+    }
+    to {
+        
+        margin-top: 450px;
+         opacity: 0;
+        
+    }
+
+}
+
+@-webkit-keyframes drop4 {
+    from {
+       
+       margin-top: 0px;
+      opacity: 1;
+    }
+    95% {
+    opacity: 0.9%;
+    }
+    to {
+        
+        margin-top: 450px;
+         opacity: 0;
+        
+    }
+
+}
+    

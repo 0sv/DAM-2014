@@ -1,13 +1,4 @@
 
-.box:nth-child(2n+1):hover{
-    -webkit-transform: translatex(400px) translatey(100px) ;
-}
-.box:nth-child(2n):hover{
-    -webkit-transform: translatex(400px) translatey(-100px) ;
-}
-
-
-
 
 .box{
 
