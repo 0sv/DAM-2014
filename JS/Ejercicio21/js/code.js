@@ -6,6 +6,24 @@ window.$ = Element.prototype.$ = function(selector) {
 
 window.onload = function() {
     var formulario = $("#registro");
-
-    formulario.validar();
+    // var formulario1 = $("#registro1");
+    formulario.validar({
+        'required': {
+            'emsg': 'campo requerido',
+            'clases': 'error-requerido'
+        },
+        'textarea': {
+            'emsg': "longitud máxima excedida",
+            'clases': 'error-textarea'
+        },
+        'password': {
+            'emsg': "cotraseña demasiado debil",
+            'clases': 'error-password'
+        },
+        'email': {
+            'emsg': "email erroneo",
+            'clases': 'error-email'
+        }
+    });
+    // formulario1.validar();
 };

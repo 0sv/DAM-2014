@@ -9,11 +9,13 @@
 </head>
 
 <body>
-    <form action="servidor.php" method="POST" id="registro">
+    <form action="servidor.php" method="POST" id="registro" class="prel">
         <fieldset>
             <legend>Registro</legend>
+
             <label for="registro_nombre">Nombre:</label>
-            <input type="text" name="nombre" id="registro_nombre" data-validator ="required">
+            <input  type="text" name="nombre" id="registro_nombre" data-validator ="required">
+            
             <label for="registro_apellidos">Apellido:</label>
             <input type="text" name="apellido" id="registro_apellido" data-validator ="required" >
             <label for="registro_email">Email:</label>
@@ -27,6 +29,7 @@
             <input type="submit" value="Enviar">
         </fieldset>
     </form>
+   
     <script type="text/javascript" src="js/validador.js"></script>
     <script type="text/javascript" src="js/validar.formulario.js"></script>
     <script type="text/javascript" src="js/code.js"></script>
