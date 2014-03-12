@@ -77,6 +77,28 @@ body {font-family: arial, helvetica;}
     right: 0;
 }
 
+.avisoupleft{
+    border-radius: 5px;
+    border: solid 2px #A00;
+    font-size: 0.75em;
+    margin-right: 290px;
+    z-index: 50;
+    margin-top: 10px;
+    right: 0;
+}
+.arrowupleft{
+    width: 0; 
+    height: 0; 
+    margin-top: 3px;
+    margin-right: 370px;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    
+    border-bottom: 7px solid #A00;
+    z-index: 50;
+    right: 0;
+}
+
 
 
 

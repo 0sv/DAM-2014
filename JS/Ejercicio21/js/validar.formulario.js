@@ -9,7 +9,7 @@ HTMLFormElement.prototype.validar = function(opts) {
     var borraAvisos = function(obj, optsType) {
         var listaErrores = form.querySelectorAll('.' + optsType.clases + '-' + obj.name);
 
-        //console.log("SOY " + form.tagName + " BUSCANDO: " + optsType.clases + '.' + obj.name + " ENCONTRADOS: " + listaErrores.length);
+        console.log("SOY " + form.tagName + " BUSCANDO: " + optsType.clases + '.' + obj.name + " ENCONTRADOS: " + listaErrores.length);
 
         if (listaErrores.length > 0) {
             for (var i = listaErrores.length - 1; i >= 0; i--) {
@@ -49,6 +49,11 @@ HTMLFormElement.prototype.validar = function(opts) {
         if (optsType.clases == "error-textarea") {
             item.classList.add("avisoup");
             arrow.classList.add("arrowup");
+        } else if (optsType.clases + '-' + obj.name == "error-requerido-condiciones")
+
+        {
+            item.classList.add("avisoupleft");
+            arrow.classList.add("arrowupleft");
         } else
 
 
@@ -86,6 +91,7 @@ HTMLFormElement.prototype.validar = function(opts) {
                         this.labels[0].classList.remove("red-txt");
                         borraAvisos(this, opts.required);
                     }
+                    break;
                 }
 
 
@@ -114,7 +120,7 @@ HTMLFormElement.prototype.validar = function(opts) {
                     createErrorAdvice(this, opts.email);
                 } else {
                     this.classList.remove("red-bg");
-                    borraAvisos(this, opts.required);
+                    borraAvisos(this, opts.email);
                 }
                 break;
             case "password":
@@ -127,7 +133,7 @@ HTMLFormElement.prototype.validar = function(opts) {
                     createErrorAdvice(this, opts.password);
                 } else {
                     this.classList.remove("red-bg");
-                    borraAvisos(this, opts.required);
+                    borraAvisos(this, opts.password);
                 }
                 break;
             case "min":
@@ -142,7 +148,7 @@ HTMLFormElement.prototype.validar = function(opts) {
                     createErrorAdvice(this, opts.textarea);
                 } else {
                     this.classList.remove("red-bg");
-                    borraAvisos(this, opts.required);
+                    borraAvisos(this, opts.textarea);
                 }
                 break;
             default:
