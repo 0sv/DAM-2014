@@ -39,7 +39,7 @@ APP.validador = (function() {
         var pass3 = /[0-9]/;
 
 
-        return (pass1.test(valor) && pass2.test(valor) && pass3.test(valor) && valor.length > 5);
+        return (pass1.test(valor) && pass2.test(valor) && pass3.test(valor) && valor.length > 5 && this.required(valor));
 
     };
 
