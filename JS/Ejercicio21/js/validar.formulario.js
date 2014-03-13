@@ -162,9 +162,6 @@ HTMLFormElement.prototype.validar = function(opts) {
 
     for (var i = hijos.length - 1; i >= 0; i--) {
 
-
-
-
         if (hijos[i].dataset.validator != undefined)
             var selfVal = hijos[i].dataset.validator; {
             hijos[i].addEventListener("blur", checkField);
@@ -180,23 +177,6 @@ HTMLFormElement.prototype.validar = function(opts) {
     };
 
 
-    // var hijosTA = this.querySelectorAll('textarea');
-
-
-
-    // for (var i = hijosTA.length - 1; i >= 0; i--) {
-
-
-    //     if (hijosTA[i].dataset.validator != undefined)
-    //         var selfVal = hijosTA[i].dataset.validator; {
-    //         hijosTA[i].addEventListener("keyup", checkField);
-    //         hijosTA[i].addEventListener("blur", checkField);
-    //         hijosTA[i].addEventListener("checkMe", checkField);
-
-    //     }
-
-
-    // };
 
 
     var checkForm = function(e) {
@@ -210,11 +190,7 @@ HTMLFormElement.prototype.validar = function(opts) {
 
             };
 
-            // for (var i = hijosTA.length - 1; i >= 0; i--) {
 
-            //     hijosTA[i].dispatchEvent(event);
-
-            // };
         } catch (ex) {
             console.log(ex);
             e.preventDefault();
@@ -230,7 +206,7 @@ HTMLFormElement.prototype.validar = function(opts) {
     };
 
 
-    this.addEventListener("submit", checkForm);
+    form.addEventListener("submit", checkForm);
 
 
     return true;
