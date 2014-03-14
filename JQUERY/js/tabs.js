@@ -9,6 +9,7 @@ $(function() {
                 $(this).siblings().removeClass('current').data('tab').hide();
             })
         );
-        $menu.insertBefore($divs.first());
+
     });
+    $menu.insertBefore($divs.first());
 });
