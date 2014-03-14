@@ -1,15 +1,35 @@
 $(function() {
     var $divs = $('div.module').hide(); // $divs.hide();  
     var $menu = $('<ul></ul>');
+    var tabs = $menu.addClass('tabs');
+    var $lis = [];
     $.each($divs, function() {
-        $menu.append($('<li>' + $(this).find('h2').text() + '</li>')
-            .data('tab', $(this))
-            .on('click', function() {
-                $(this).addClass('current').data('tab').show();
-                $(this).siblings().removeClass('current').data('tab').hide();
-            })
-        );
+        var $modulo = $(this);
+        var $title = $modulo.find('h2').first().text();
+
+        var $li = $('<li/>', {
+            'text': $title
+        });
+        $li.data('target', $modulo);
+
+
+        $lis.push($li.get(0));
+    });
+
+
+
+    $menu.append(lis).insertBefore($divs.eq(0));
+
+    $(document).on('click', 'tabs li', function(e) {
+        var $this = $(this);
+
+        $this.addClass('current').siblings('.current').removeClass('.current');
+        $this.data('target').show().siblings()('module').hide();
 
     });
-    $menu.insertBefore($divs.first());
+
+    divs.eq(0).show();
+    $tabs.find('li').filter(':first').addClass('current');
+
+
 });
