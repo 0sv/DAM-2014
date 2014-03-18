@@ -27,7 +27,7 @@ $(function() {
     var $ac = $('img[alt]');
     //console.log($ac);
 
-    var $tbo = $('tbody tr:even').css('background-color', 'gray');
+    // var $tbo = $('tbody tr:even').css('background-color', 'gray');
     //console.log($tbo);
 
     ////////////////////////////////////////////////////////////////////7
@@ -110,4 +110,7 @@ $(function() {
     //     'class': 'module',
     //     'id': 'myId'
     // }).append($('img').first().clone());
+
+    $('table, div').stripe('#00F', 'odd');
+    $('table, div').stripe('#FF0', 'evon');
 });
