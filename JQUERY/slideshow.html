@@ -3,8 +3,12 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<title>jQuery Fundamentals :: Slideshow</title>
+  <!-- bxSlider CSS file -->
+   <link href="bxSlider/jquery.bxslider.css" rel="stylesheet" /> 
+  <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
 	<link href="css/reset.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/main.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 
 <body>
@@ -26,10 +30,25 @@
     </li>
   </ul>
 
-  <script src="libs/jquery-1.7.2.js"></script>
-  <script>
-
-  </script>
+ 
+ <div class="clipwrapper">
+ <div class="clip">
+  <a class="fancybox mini" rel="group" href="images/fruit.jpg"><img src="images/fruit.jpg" alt="fruit"/></a>
+</div>
+<div class="clip2">
+  <a class="fancybox mini" rel="group" href="images/vegetable.jpg"><img src="images/vegetable.jpg" alt="vegetable"/></a>
+  </div>
+  <div class="clip3">
+  <a class="fancybox mini" rel="group" href="images/bread.jpg"><img src="images/bread.jpg" alt="bread"/></a>
+</div>
+</div>
+ <script src="libs/jquery-1.11.0.min.js"></script>
+  <!-- bxSlider Javascript file -->
+ <script src="bxSlider/jquery.bxslider.min.js"></script>
+ 
+<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js"></script>
+<script src="js/slideshow.js"></script>
+<script src="js/fancybox.js"></script>
 </body>
 </html>
 

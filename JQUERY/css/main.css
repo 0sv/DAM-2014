@@ -1,0 +1,74 @@
+.btnPrev{
+    float: left;
+}
+
+.btnNext{
+    float: right;
+}
+
+.boton{
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #000000;
+    padding: 8px 20px;
+    background: -moz-linear-gradient(
+        top,
+        #ffffff 0%,
+        #b7f0bd 50%,
+        #82ed97 50%,
+        #1b732f 65%,
+        #3ee660);
+    background: -webkit-gradient(
+        linear, left top, left bottom,
+        from(#ffffff),
+        color-stop(0.50, #b7f0bd),
+        color-stop(0.50, #82ed97),
+        color-stop(0.65, #1b732f),
+        to(#3ee660));
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    -moz-box-shadow:
+        0px 1px 3px rgba(000,000,000,0.5),
+        inset 0px 0px 5px rgba(186,186,186,0.6);
+    -webkit-box-shadow:
+        0px 1px 3px rgba(000,000,000,0.5),
+        inset 0px 0px 5px rgba(186,186,186,0.6);
+    box-shadow:
+        0px 1px 3px rgba(000,000,000,0.5),
+        inset 0px 0px 5px rgba(186,186,186,0.6);
+    text-shadow:
+        0px -1px 3px rgba(255,255,255,0.8),
+        0px 1px 0px rgba(255,255,255,0.3);
+
+
+
+}
+
+.clipwrapper{
+ position:relative;
+ margin-top: 50px;
+ height:225px;
+}
+.clip{
+ position:absolute;
+ left : 0;
+ clip:rect(50px 218px 155px 82px);
+
+}
+
+.clip2{
+ position:absolute;
+ left : 150px;
+ clip:rect(50px 218px 155px 82px);
+
+}
+
+.clip3{
+ position:absolute;
+ left : 300px;
+ clip:rect(50px 218px 155px 82px);
+
+}
