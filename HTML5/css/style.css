@@ -1,0 +1,42 @@
+#botones input{
+display: inline-block;}
+
+.btn{
+    border-radius: 5px;
+    background-color: rgba(128,128,128,0.70);
+    border: solid 2px #555;
+    font-size: 1em;
+    margin-right: 5px;
+    z-index: 50;
+    margin-top: -50px;
+    right: 0;
+
+}
+
+.btnred{
+    background-color: rgba(255,10,10,0.70);
+    border: solid 2px #500;  
+}
+
+.btngreen{
+    background-color: rgba(10,255,10,0.70);
+    border: solid 2px #050;  
+}
+
+.btnblue{
+    background-color: rgba(10,10,255,0.70);
+    border: solid 2px #005;  
+}
+.btnblack{
+    background-color: rgba(10,10,10,0.70);
+    border: solid 2px #000;  
+}
+
+.btnbold{
+    font-weight: bold;
+
+}
+
+.btnitalic{
+    font-style: italic; 
+}
