@@ -16,6 +16,8 @@ $(document).ready(function() {
     texto[0].innerHTML = textoStore;
 
 
+
+
     $(document).on('click', 'input', function(event) {
 
         var res = document.execCommand(event.currentTarget.dataset.format, false, event.currentTarget.dataset.value);
@@ -23,5 +25,7 @@ $(document).ready(function() {
         localStorage.setItem('texto', texto[0].innerHTML);
 
     });
+
+
 
 });
