@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>VIDEO PLAYER</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../icomoon/style.css"></head>
+</head>
+
+<body>
+<div id="reproductor">
+    <video preload=auto id="video" poster="poster.jpg">
+     <source src="lego.mp4" type='video/mp4'; codecs="avc1.42E01E, mp4a.40.2">
+     <source src="lego.webm" type='video/webm'; codecs="vp8, vorbis">
+    <p>Your browser doesn’t support video.
+     Please download the video in <a href="lego.webm">webM</a>
+     or <a href="lego.mp4">MP4</a> format. </p>
+    </video>
+
+</div>
+<div id="barraprogreso">
+    <progress id="progress" max="1" value="0"></progress>
+</div>
+<div id="controles">
+
+    <input class="btn icon-play"     type="button" id="reproducción" value="Reproducir"    data-action="play">
+    <input class="btn icon-pause"    type="button" id="pausa"        value="Pausa"         data-action="pause">
+    <input class="btn icon-stop"     type="button" id="parar"        value="Parar"         data-action="stop">
+    <input class="btn icon-forward"  type="button" id="avanzar"      value="Avanzar"       data-action="ff">
+    <input class="btn icon-backward" type="button" id="retroceder"   value="Retroceder"    data-action="bw">
+    <input class="btn icon-first"    type="button" id="inicio"       value="Inicio"        data-action="init">
+    <input class="btn icon-last"     type="button" id="fin"          value="Fin"           data-action="end">
+    <input class="btn expand"        type="button" id="completa" value="Pantalla Completa"  data-action="fullscreen">
+
+    <div id="volvideo">
+        <label for="volumen">Volumen:</label>
+        <input class="vol" type="range"  id="volumen"   value="0"  data-action="volume">
+    </div>
+
+</div>
+
+<div id="lista">
+    <input id="videolist" type="list" list="mylist"  placeholder="Selecciona el video">
+
+    <datalist id="mylist">
+     <option label="Lego Black Ops" value="lego"/>
+     <option label="Cats" value="cats"/>
+    </datalist>
+</div>
+<script src="../jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
