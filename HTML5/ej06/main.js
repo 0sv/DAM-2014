@@ -66,12 +66,12 @@ $(document).ready(function() {
         }
         if (this.dataset.action == "fullscreen") {
 
-            if (video.requestFullScreen) {
-                video.requestFullScreen();
-            } else if (video.mozRequestFullScreen) {
-                video.mozRequestFullScreen();
-            } else if (video.webkitRequestFullScreen) {
-                video.webkitRequestFullScreen();
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            } else if (video.mozRequestFullscreen) {
+                video.mozRequestFullscreen();
+            } else if (video.webkitRequestFullscreen) {
+                video.webkitRequestFullscreen();
             }
 
 
