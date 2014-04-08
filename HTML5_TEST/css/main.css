@@ -1,0 +1,35 @@
+.hidden{
+    display: none;
+}
+#opcion1, #opcion2{
+    width: 30%;
+    display: block;
+    float: left;
+}
+
+#participante img{
+
+    width: 104.1px;
+    height: 94.5px;
+}
+
+#controles input{
+    display: inline-block;
+}
+
+header h1{
+    text-align: center;
+}
+
+
+.navy section{
+    display: inline-block;
+    text-decoration: underline;
+    color: #00F;
+}
+
+.navy section.current{
+    display: inline-block;
+    text-decoration: none;
+    color: #F00;
+}
