@@ -23,7 +23,10 @@
     </div>
 
     <header data-role="header">
-        <h1>Página principal</h1>
+    <a href="index.html" data-icon="delete">Cancel</a>
+    <h1>Página principal</h1>
+    <a href="index.html" data-icon="check" data-theme="a">Save</a>
+       
     </header>
 
     
@@ -39,12 +42,47 @@
         <a type="button" id="btnMultiPages" class="btn nolink" href="popup.html"  >PopUp</a>
 
         <a type="button" id="btnMultiPages" class="btn nolink" href="#mypanel"  >Menu</a>
+
+        <div class="ui-grid-b">
+            <div class="ui-block-a"> A<img src="http://placehold.it/100x100"></div>
+            <div class="ui-block-b"> B<img src="http://placehold.it/100x100"></div>
+            <div class="ui-block-c"> C<img src="http://placehold.it/100x100"></div>
+             <div class="ui-block-a"> D<img src="http://placehold.it/100x100"></div>
+            <div class="ui-block-b"> E<img src="http://placehold.it/100x100"></div>
+            <div class="ui-block-c"> F<img src="http://placehold.it/100x100"></div>
+             <div class="ui-block-a"> G<img src="http://placehold.it/100x100"></div>
+            <div class="ui-block-b"> H<img src="http://placehold.it/100x100"></div>
+            <div class="ui-block-c"> I<img src="http://placehold.it/100x100"></div>
+        </div><!-- /grid-b -->
+
+
+
+        <div data-role="collapsible-set">
+
+            <div data-role="collapsible" data-collapsed="false" data-iconpos="right">
+            <h3>Section 1</h3>
+            <p>I'm the collapsible set content for section 1.</p>
+            </div>
+            
+            <div data-role="collapsible">
+            <h3>Section 2</h3>
+            <p>I'm the collapsible set content for section 2.</p>
+            </div>
+            
+        </div>
+
         </section>
 
     </section><!-- /content -->
 
     <footer data-role="footer">
-        <h4>Contenido relacionado:</h4>
+       <div data-role="navbar"  data-iconpos="bottom">>
+        <ul>
+            <li><a href="#">One</a></li>
+            <li><a href="#">Two</a></li>
+            <li><a href="#">Three</a></li>
+        </ul>
+    </div>
     </footer>
 </article>      
 
