@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css" />
+     <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/butons.css" />
+    <script src="js/vendor/jquery-2.1.0.min.js"></script>
+    <script src="js/vendor/jquery.mobile.custom.min.js"></script>
+
+</head>
+<body>
+
+<!-- Start of first page -->
+<div data-role="page" id="multiPage1" title="MultiPaginas 1ª">
+
+    <header data-role="header">
+        <h1>Ejemplo de Multipaginas</h1>
+    </header>
+
+    <section role="main" class="ui-content">
+        <p>Primera pagina de la seccion multipaginas</p>
+        <p><a class="btn nolink" href="#multiPage2" data-transition="slidedown">Mostrar la siguiente pagina </a></p>
+        <p>Volver a la pagina principal</p>
+        <p><a class="btn nolink" href="index.html" data-ajax="false">Volver al menu </a></p>
+    </section>
+
+    <div data-role="footer">
+        <h4>Page Footer</h4>
+    </div>
+</div>
+
+<!-- Start of second page -->
+<div data-role="page" id="multiPage2" title="MultiPaginas 2ª">
+
+    <div data-role="header">
+        <h1>Segunda pagina de ejemplo de MultiPaginas</h1>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+        <p>Esta es la segunda pagina de dos, en la sección de multipaginas</p>
+        <p><a href="#multiPage1" data-transition="slideup">Volver a la primera pagina</a></p>
+    </div><!-- /content -->
+
+    <div data-role="footer">
+        <h4>Page Footer</h4>
+    </div><!-- /footer -->
+</div><!-- /page -->
+</body>
+</html>
