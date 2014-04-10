@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+	<script src="js/lc.js"></script>
+
+</head>
+<body>
+
+	<div data-role="page" id="index">
+
+		<header data-role="header" data-position="fixed">
+			<h1>First Page</h1>
+			<a href="#panel" data-role="button" data-icon="grid" class="ui-btn-right">Options</a>
+		</header><!-- /header -->
+
+		<section id="panel" data-role="panel" data-display="overlay" data-position="right">
+			<p>This is my panel</p>
+			
+			<a href="#index" data-rel="close" data-role="button" data-icon="delete">Close panel</a>
+		</section>
+
+		<section role="main" class="ui-content" id="eventos">
+			<p>Page content goes here.</p>
+			<p>Estado:<span id="estado"></span></p>
+			<p>Dirección:<span id="direccion"></span></p>
+			<p>Distancia:<span id="distancia"></span></p>
+
+
+
+			<p>This is a popup <a href="#mypopup" data-rel="popup" data-trastition="pop">Open info</a></p>
+			
+			<div id="mypopup"data-role="popup">
+				<div data-role="collapsible-set">
+					<div data-role="collapsible">
+					<h3>Section 1</h3>
+					<p>I'm the collapsible set content for section 1.</p>
+					</div>
+					
+					<div data-role="collapsible" data-collapsed="false">
+					<h3>Section 2</h3>
+					<p>I'm the collapsible set content for section 2.</p>
+					</div>
+		
+				</div>
+			</div>
+		</section><!-- /content -->
+
+		<section class="ui-grid-a">
+
+			<div class="ui-block-a"> <div class="ui-bar ui-bar-a" >
+				<ul data-role="listview" data-count-theme="b" data-inset="true">
+			    <li data-role="list-divider" data-theme="b"><h1>Seperate Page Sublists</h1></li>
+			    <li data-role="list-divider"><h1>Nested list page generated from markup requires plugin</h1></li>
+			    <li>
+			        Infiniti
+			        <ul>
+			            <li>G37</li>
+			            <li>Q50</li>
+			            <li>M57</li>
+			            <li>FX</li>
+			            <li>EX</li>
+			        </ul>
+			    </li>
+			    <li>
+			        <h1>Audi</h1>
+			        <ul>
+			            <li>A6</li>
+			            <li>S6</li>
+			            <li>A7</li>
+			            <li>S7</li>
+			            <li>A8</li>
+			            <li>S8</li>
+			        </ul>
+			    </li>
+			    <li>
+			        <h1>BMW</h1>
+			        <ul>
+			            <li>1 series</li>
+			            <li>3 series</li>
+			            <li>5 series</li>
+			            <li>6 series</li>
+			            <li>7 series</li>
+			        </ul>
+			    </li>
+			    <li>
+			        <h1>Cadillac
+			        </h1>
+			        <ul>
+			            <li>CTS</li>
+			            <li>ATS</li>
+			            <li>XTS</li>
+			        </ul>
+			    </li>
+			    <li>
+			        <h1>Lexus</h1>
+			        <ul>
+			            <li>IS</li>
+			            <li>ES</li>
+			            <li>GS</li>
+			            <li>LS</li>
+			        </ul>
+			    </li>
+			    <li>
+			        <h1>Mercedes</h1>
+			        <ul>
+			            <li>A-Class</li>
+			            <li>B-Class</li>
+			            <li>C-Class</li>
+			            <li>CL-Class</li>
+			            <li>E-Class</li>
+			        </ul>
+			    </li>
+				</ul>
+			</div></div>
+
+		 	<div class="ui-block-b"><div class="ui-bar ui-bar-a">
+
+			 	<div class="ui-grid-a">
+
+				  	<div class="ui-block-a"><div class="ui-bar ui-bar-a">
+						<label for="select-choice-8" class="select">Multi-select with optgroups, custom icon and position:</label>
+						<select name="select-choice-8" id="select-choice-8" multiple="multiple" data-native-menu="false" data-icon="grid" data-iconpos="left">
+						    <option>Choose a few options:</option>
+						    <optgroup label="USPS">
+						        <option value="standard" selected="">Standard: 7 day</option>
+						        <option value="rush">Rush: 3 days</option>
+						        <option value="express">Express: next day</option>
+						        <option value="overnight">Overnight</option>
+						    </optgroup>
+						    <optgroup label="FedEx">
+						        <option value="firstOvernight">First Overnight</option>
+						        <option value="expressSaver">Express Saver</option>
+						        <option value="ground">Ground</option>
+						    </optgroup>
+						</select>
+					</div></div>
+
+					<div class="ui-block-b"><div class="ui-bar ui-bar-a">
+						<div class="ui-grid-a">
+
+							<div class="ui-block-a"><div class="ui-bar ui-bar-a">
+								<label for="flip-6">Flip toggle:</label>
+								<select name="flip-6" id="flip-6" data-role="slider" data-mini="true">
+								    <option value="off">Off</option>
+								    <option value="on">On</option>
+								</select>
+							</div></div>
+
+							<div class="ui-block-b"><div class="ui-bar ui-bar-a">
+								<label for="flip-6">Flip toggle:</label>
+								<select name="flip-6" id="flip-6" data-role="slider" data-mini="true">
+								    <option value="off">Off</option>
+								    <option value="on">On</option>
+								</select>
+							</div></div>
+
+							<div class="ui-block-a"><div class="ui-bar ui-bar-a">
+								<label for="flip-6">Flip toggle:</label>
+								<select name="flip-6" id="flip-6" data-role="slider" data-mini="true">
+								    <option value="off">Off</option>
+								    <option value="on">On</option>
+								</select>
+							</div></div>
+
+							<div class="ui-block-b"><div class="ui-bar ui-bar-a">
+								<label for="flip-6">Flip toggle:</label>
+								<select name="flip-6" id="flip-6" data-role="slider" data-mini="true">
+								    <option value="off">Off</option>
+								    <option value="on">On</option>
+								</select>
+							</div></div>
+
+						</div></div>
+					</div></div>
+
+					<div class="ui-block-a"><div class="ui-bar ui-bar-a">
+						<fieldset data-role="controlgroup">
+						    <legend>Vertical controlgroup, checkbox:</legend>
+						    <input type="checkbox" name="checkbox-v-2a" id="checkbox-v-2a">
+						    <label for="checkbox-v-2a">One</label>
+						    <input type="checkbox" name="checkbox-v-2b" id="checkbox-v-2b">
+						    <label for="checkbox-v-2b">Two</label>
+						    <input type="checkbox" name="checkbox-v-2c" id="checkbox-v-2c">
+						    <label for="checkbox-v-2c">Three</label>
+						</fieldset>
+					</div></div>
+
+					<div class="ui-block-b"><div class="ui-bar ui-bar-a">
+						<label for="date">Date:</label>
+						<input type="date" name="date" id="date" value="">
+					</div></div>
+
+					<div class="ui-block-b"><div class="ui-bar ui-bar-a">
+						<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+						    <legend>Checkboxes, mini, h-controlgroup:</legend>
+						    <input type="checkbox" name="checkbox-6" id="checkbox-6">
+						    <label for="checkbox-6">b</label>
+						    <input type="checkbox" name="checkbox-7" id="checkbox-7" checked="">
+						    <label for="checkbox-7"><em>i</em></label>
+						    <input type="checkbox" name="checkbox-8" id="checkbox-8">
+						    <label for="checkbox-8">u</label>
+						</fieldset>
+					</div></div>
+
+				
+					<div class="ui-block-b"><div class="ui-bar ui-bar-a">
+						<fieldset data-role="controlgroup">
+					   	 <legend>Radio buttons, vertical controlgroup:</legend>
+					        <input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="checked">
+					        <label for="radio-choice-1">Cat</label>
+					        <input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2">
+					        <label for="radio-choice-2">Dog</label>
+					        <input type="radio" name="radio-choice-1" id="radio-choice-3" value="choice-3">
+					        <label for="radio-choice-3">Hamster</label>
+					        <input type="radio" name="radio-choice-1" id="radio-choice-4" value="choice-4">
+					        <label for="radio-choice-4">Lizard</label>
+						</fieldset>
+					</div></div>
+			</div></div>
+
+			<div class="ui-block-a"> <div class="ui-bar ui-bar-a" >
+				<label for="slider-6">Slider:</label>
+				<input type="range" name="slider-6" id="slider-6" value="50" min="0" max="100" data-highlight="true" data-mini="true">
+			</div></div>
+
+		</section>
+
+		<footer data-role="footer" data-position="fixed">
+		</footer><!-- /footer -->
+	</div>
+<script src="js/main.js"></script>
+</body>
+</html>
+
+	
+

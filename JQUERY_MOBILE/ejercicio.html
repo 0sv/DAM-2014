@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Titulo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css" />
+     <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/butons.css" />
+    <script src="js/vendor/jquery-2.1.0.min.js"></script>
+    <script src="js/vendor/jquery.mobile.custom.min.js"></script>
+</head>
+<body>
+
+<article data-role="page" id="mainPage" >
+ 
+    <div data-role="panel" id="mypanel" data-display="push">
+
+           <h3>HOLA MUNDO</h3>
+           <p>Esto es el menu</p>
+           <p>No hay nada todavia</p>
+    </div>
+
+    <header data-role="header">
+    <a href="index.html" data-icon="delete">Cancel</a>
+    <h1>Página principal</h1>
+    <a href="index.html" data-icon="check" data-theme="a">Save</a>
+       
+    </header>
+
+    
+
+    <section role="main" class="ui-content">
+        <h3>Caracteristicas que ofrece JQuery<i>Mobile</i></h3>
+
+        <section id="botones">
+        <a type="button" id="btnMultiPages" class="btn nolink" href="multipage.html" data-ajax="false">Multipaginas</a>
+
+        <a type="button" id="btnMultiPages" class="btn nolink" href="dialogo.html"  >Dialogo</a>
+
+        <a type="button" id="btnMultiPages" class="btn nolink" href="popup.html"  >PopUp</a>
+
+        <a type="button" id="btnMultiPages" class="btn nolink" href="#mypanel"  >Menu</a>
+
+        <div class="ui-grid-b">
+            <div class="ui-block-a"> A<img src="http://placehold.it/100x100"></div>
+            <div class="ui-block-b"> B<img src="http://placehold.it/100x100"></div>
+            <div class="ui-block-c"> C<img src="http://placehold.it/100x100"></div>
+             <div class="ui-block-a"> D<img src="http://placehold.it/100x100"></div>
+            <div class="ui-block-b"> E<img src="http://placehold.it/100x100"></div>
+            <div class="ui-block-c"> F<img src="http://placehold.it/100x100"></div>
+             <div class="ui-block-a"> G<img src="http://placehold.it/100x100"></div>
+            <div class="ui-block-b"> H<img src="http://placehold.it/100x100"></div>
+            <div class="ui-block-c"> I<img src="http://placehold.it/100x100"></div>
+        </div><!-- /grid-b -->
+
+
+
+        <div data-role="collapsible-set">
+
+            <div data-role="collapsible" data-collapsed="false" data-iconpos="right">
+            <h3>Section 1</h3>
+            <p>I'm the collapsible set content for section 1.</p>
+            </div>
+            
+            <div data-role="collapsible">
+            <h3>Section 2</h3>
+            <p>I'm the collapsible set content for section 2.</p>
+            </div>
+            
+        </div>
+
+        </section>
+
+    </section><!-- /content -->
+
+    <footer data-role="footer">
+       <div data-role="navbar"  data-iconpos="bottom">>
+        <ul>
+            <li><a href="#">One</a></li>
+            <li><a href="#">Two</a></li>
+            <li><a href="#">Three</a></li>
+        </ul>
+    </div>
+    </footer>
+</article>      
+
+
+
+
+</body>
+</html>
