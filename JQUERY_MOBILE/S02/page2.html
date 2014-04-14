@@ -31,6 +31,28 @@
 		<p>View internal page called <a href="#page2-view2" data-transition="slide">page2-view2</a></p>
 	</div><!-- /content -->
 
+	<label for="slider2">Flip switch:</label>
+<select name="slider2" id="slider2" data-role="slider">
+    <option value="off">Off</option>
+    <option value="on">On</option>
+</select>
+<label for="slider2">Flip switch:</label>
+<select name="slider2" id="slider2" data-role="slider">
+    <option value="off">Off</option>
+    <option value="on">On</option>
+</select>
+<label for="slider2">Flip switch:</label>
+<select name="slider2" id="slider2" data-role="slider">
+    <option value="off">Off</option>
+    <option value="on">On</option>
+</select>
+
+<label for="textarea">Textarea:</label>
+<textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+
+<label for="textarea">Textarea:</label>
+<textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+
 	<footer data-role="footer" data-position="fixed">
 	</footer><!-- /footer -->
 </div><!-- /page -->
@@ -41,6 +63,7 @@
 	<header data-role="header" data-position="fixed">
 		<a href="index.html" data-ajax="false" data-role="button" data-icon="home">Home</a>
 		<h1>Second Page - View 2</h1>
+
 		<a href="#panel" data-role="button" data-icon="grid">Options</a>
 	</header><!-- /header -->
 
@@ -53,7 +76,14 @@
 	<div role="main" class="ui-content">
 		<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
 		<p><a href="#page2-view1" data-rel="back" data-direction="reverse" data-role="button" data-icon="back">Back</a></p>
+
 	</div><!-- /content -->
+<div data-role="rangeslider">
+        <label for="range-1a">Rangeslider:</label>
+        <input type="range" name="range-1a" id="range-1a" min="0" max="100" value="40">
+        <label for="range-1b">Rangeslider:</label>
+        <input type="range" name="range-1b" id="range-1b" min="0" max="100" value="80">
+    </div>
 
 	<footer data-role="footer" data-position="fixed">
 	</footer><!-- /footer -->
