@@ -22,7 +22,39 @@
                 done();
             });
         });
-
+        describe('Devuelve "" para llamada sin argumentos', function() {
+            it('tiene que devolver ""', function() {
+                assert.equal('', mod.testnumber());
+            });
+        });
+        describe('Devuelve "" para llamada con espacios', function() {
+            it('tiene que devolver ""', function() {
+                assert.equal('', mod.testnumber("                 "));
+            });
+        });
+        describe('Devuelve "" para llamada con NaN', function() {
+            it('tiene que devolver ""', function() {
+                assert.equal('', mod.testnumber("Mira! Un lindo gatito"));
+            });
+        });
+        describe('Devuelve "" para llamada con Undefined', function() {
+            it('tiene que devolver ""', function() {
+                var undf;
+                assert.equal('', mod.testnumber(undf));
+            });
+        });
+        describe('Devuelve "" para llamada con varios argumentos', function() {
+            it('tiene que devolver 1', function() {
+                var undf;
+                assert.equal(1, mod.testnumber(1, 4, "patata"));
+            });
+        });
+        describe('Devuelve "" para llamada con varios argumentos', function() {
+            it('tiene que devolver ""', function() {
+                var undf;
+                assert.equal('', mod.testnumber("Gatete", 1, 4, "patata"));
+            });
+        });
         describe('Devuelve el numero que se le pasa', function() {
             it('tiene que devolver 1', function() {
                 assert.equal(1, mod.testnumber(1));
@@ -119,7 +151,47 @@
         });
 
 
-        ///////////////////////////////////////////////////////////////////////////////7
+        ///////////////////////////////////////////////////////////////////////////////
+
+        describe('Testea la listapara llamada sin argumentos', function() {
+            it('tiene que devolver ""', function() {
+                assert.equal("", mod.testlist());
+            });
+        });
+
+        describe('Testea la listapara llamada con espacios', function() {
+            it('tiene que devolver ""', function() {
+                assert.equal("", mod.testlist("             "));
+            });
+        });
+
+        describe('Testea la listapara llamada con NaN', function() {
+            it('tiene que devolver ""', function() {
+                assert.equal("", mod.testlist("Mira! Una monton de lindos gatitos"));
+            });
+        });
+
+
+        describe('Testea la listapara llamada con Undefined', function() {
+            it('tiene que devolver ""', function() {
+                var undf;
+                assert.equal("", mod.testlist(undf));
+            });
+        });
+
+        describe('Testea la listapara llamada con varios argumentos', function() {
+            it('tiene que devolver 1', function() {
+                var undf;
+                assert.equal(1, mod.testlist(1, "Patata", 6));
+            });
+        });
+
+        describe('Testea la listapara llamada con varios argumentos', function() {
+            it('tiene que devolver ""', function() {
+                var undf;
+                assert.equal("", mod.testlist("un cesto de Gatos", 1, "Patata", 6));
+            });
+        });
 
         describe('Testea la lista de numero desde el numero dado', function() {
             it('tiene que devolver una lista', function() {
