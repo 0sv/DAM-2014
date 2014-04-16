@@ -1,4 +1,4 @@
-define("FizzBuzz", ['jquery', 'Fizz', 'Buzz', 'FizzAndBuzz'], function() {
+define("FizzBuzz", ['jquery', 'Buzz', 'Fizz', 'FizzAndBuzz'], function() {
 
     // arguments
     var tests = [];
