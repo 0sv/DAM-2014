@@ -1,74 +1,74 @@
-define("data", ['ydn-db'], function(ydn) {
+define('data', ['ydn-db'], function(ydn) {
+    console.log('Data module started');
 
-    var dbname = 'db-twdb';
-    var storename = 'tweetStorage'
+    var dbName = 'TwitterDB',
+        keyPath = 'id',
+        tweetTable = 'twitter',
+        db = new ydn.db.Storage(dbName);
 
-    var db = new ydn.db.Storage(dbname)
+    var addTweet = function(tweet, success, error) {
+        var req = db.add({
+            name: tweetTable,
+            keyPath: keyPath
+        }, tweet);
+        req.done(success);
+        req.fail(error);
+    };
+ 
+    var addTweets = function(tweets, success, error) {
+        var req = db.add({
+            name: tweetTable,
+            keyPath: keyPath
+        }, tweets);
+        req.done(success);
+        req.fail(error);
+    };
 
-    var saveTweet = function(objTw, callbackOk, callbackNok) {
-        var req = db.put(storename, objTw, objTw.id);
-        req.done(function() {
-            callbackOk("saveDone");
+    var getTweet = function(id, success, error) {
+        var req = db.get(tweetTable, id);
+        req.done(success);
+        req.fail(error);
+    };
+
+    var updateTweet = function(tweet, success, error) {
+        getTweet(tweet.id, function(t) {
+            if (t) {
+                var req = db.put({
+                    name: tweetTable,
+                    keyPath: keyPath
+                }, tweet);
+                req.done(success);
+                req.fail(error);
+            } else {
+                error('There is no tweet with id ' + tweet.id);
+            }
+        }, error);
+    };
+
+    var removeTweet = function(id, success, error) {
+        getTweet(id, function(tweet) {
+            if (tweet) {
+                var req = db.remove(tweetTable, id);
+                req.done(success);
+                req.fail(error);
+            } else {
+                error('There is no tweet with id ' + id);
+            }
         });
-        req.fail(function(e) {
-            callbackNok(e);
-        });
+    };
 
-    }
-
-
-    var getAllTweet = function(callbackOk, callbackNok) {
-
-        var req = db.values(storename);
-        req.done(function(records) {
-            callbackOk("getAllDone", records);
-
-        });
-        req.fail(function(e) {
-            callbackNok(e);
-        });
-
-
-    }
-
-    var getTweet = function(id, callbackOk, callbackNok) {
-
-        var req = db.get(storename, id);
-        req.done(function(record) {
-            callbackOk("getDone", record);
-
-        });
-        req.fail(function(e) {
-            callbackNok(e);
-        });
-
-
-    }
-
-    var updateTweet = function(tweet, callbackOk, callbackNok) {
-
-        saveTweet(tweet, callbackOk, callbackNok);
-
-    }
-
-    var deleteTweet = function(id, callbackOk, callbackNok) {
-        var req = db.remove(storename, id);
-        req.done(function(record) {
-            callbackOk("removeDone", record);
-
-        });
-        req.fail(function(e) {
-            callbackNok(e);
-        });
-    }
-
+    var clear = function(success, error) {
+        var req = db.clear(tweetTable);
+        req.done(success);
+        req.fail(error);
+    };
 
     return {
-        saveTweet: saveTweet,
-        getAllTweet: getAllTweet,
+        addTweet: addTweet,
+        addTweets: addTweets,
         getTweet: getTweet,
         updateTweet: updateTweet,
-        deleteTweet: deleteTweet
-    }
-
+        removeTweet: removeTweet,
+        clear: clear
+    };
 });
