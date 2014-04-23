@@ -7,21 +7,28 @@ define('data', ['ydn-db'], function(ydn) {
         db = new ydn.db.Storage(dbName);
 
     var addTweet = function(tweet, success, error) {
-        var req = db.add({
+        var req = db.put({
             name: tweetTable,
             keyPath: keyPath
         }, tweet);
         req.done(success);
         req.fail(error);
     };
- 
+
+
+
     var addTweets = function(tweets, success, error) {
-        var req = db.add({
+        var req = db.put({
             name: tweetTable,
             keyPath: keyPath
         }, tweets);
-        req.done(success);
-        req.fail(error);
+        req.done(function(e) {
+            console.log("DATABASE RECORDS");
+            success("DB Ok ", e);
+        });
+        req.fail(function(e) {
+            error("DB ERROR: " + e);
+        });
     };
 
     var getTweet = function(id, success, error) {

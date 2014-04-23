@@ -6,7 +6,16 @@
     require.config({
         paths: {
             jquery: '../bower_components/jquery/dist/jquery',
-
+            handlebars: '../bower_components/handlebars.js/dist/handlebars',
+            'ydn-db': '../bower_components/ydn-db/jsc/ydn.db-dev'
+        },
+        shim: {
+            handlebars: {
+                exports: 'Handlebars'
+            },
+            'ydn-db': {
+                exports: 'ydn'
+            }
         },
 
         baseUrl: '../app/scripts',
@@ -24,7 +33,7 @@
     //CALLBACKS PARA LOS TEST
     // ERROR
     var callbackNok = function(log) {
-        console.log("Nok");
+        console.log("Nok " + log);
         throw log;
 
     };
@@ -34,19 +43,17 @@
         console.log(log);
     };
 
-    var callbackOkSrvTweets = function(log) {
+    var callbackOkUITweets = function(log, data) {
 
-        assert.strictEqual(true, srv.getTweets.calledOnce, "Error obteniendo los tweets");
-        assert.strictEqual(true, db.addTweets.calledOnce, "Error guardando los tweets");
+        assert.strictEqual(true, UI.showTweets.calledOnce, "Error mostrando los tweets");
+        assert.strictEqual(100, data.length, "Error con el numero los tweets");
+        callbackOkUITweets.done();
 
-
-        callbackOkSrvTweets.done();
-        //console.log("CBST: " + log);
     };
 
 
 
-    describe('Ctrl module', function() {
+    describe('UI module', function() {
 
         beforeEach(function(done) {
 
@@ -64,14 +71,13 @@
 
         describe('#Check calls to methods', function() {
             beforeEach(function(done) {
-                sinon.spy(srv, 'getTweets');
-                sinon.spy(db, 'addTweets');
+                sinon.spy(UI, 'showTweets');
                 done();
             });
 
             it('Call to get tweets exposed in services', function(done) {
-                callbackOkSrvTweets.done = done;
-                ctrl.getTweetsFromTwitter(callbackOkSrvTweets, callbackNok);
+                callbackOkUITweets.done = done;
+                ctrl.getTweetsFromTwitter(callbackOkUITweets, callbackNok);
 
 
             });

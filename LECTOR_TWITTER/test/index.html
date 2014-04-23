@@ -5,9 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Mocha Spec Runner</title>
     <link rel="stylesheet" href="bower_components/mocha/mocha.css">
+    <link rel="stylesheet" href="bower_components/mocha/main.css">
 </head>
 <body>
     <div id="mocha"></div>
+    <div class="show">
+        <div id='twitter-list'></div>
+    </div>
     <script src="bower_components/mocha/mocha.js"></script>
     <script>mocha.setup('bdd')</script>
     <script src="bower_components/chai/chai.js"></script>
@@ -25,10 +29,19 @@
 
     <!-- include spec files here... -->
     <script src="../app/bower_components/requirejs/require.js"></script>
-    <script src="spec/testDB.js"></script>
-    <script src="spec/testServices.js"></script>
-    <script src="spec/testController.js"></script>
+    <!-- <script src="spec/testDB.js"></script> -->
+    <!-- <script src="spec/testServices.js"></script> -->
+    <!-- <script src="spec/testController.js"></script> -->
+    <script src="spec/testUi.js"></script>
 
     <script>mocha.run()</script>
+
+    <script id="tpl-listatweets" type="text/x-handlebars-template">
+        <ul>
+            {{#each twit}}
+             <li><span class="twuser">{{user}} : </span><span class="twtext"> {{text}}</span></li>
+            {{/each}}
+        </ul>
+    </script>
 </body>
 </html>
