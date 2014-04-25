@@ -10,7 +10,7 @@ define('services', ['quo'], function($) {
             'dataType': 'JSON',
             success: function(msg) {
                 console.log("AJAX OK");
-                ok('Twits recuperados', $.JSONParse(msg));
+                ok('Twits recuperados', JSON.parse(msg));
             },
             error: function() {
                 console.log("AJAX NOK");
