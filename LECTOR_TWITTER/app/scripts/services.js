@@ -1,22 +1,25 @@
 define('services', ['quo'], function($) {
-
+    'use strict';
+    console.log("service modules started");
     var getTweets = function(apikey, ok, nok) {
-        var tws = [];
 
+        console.log("service modules called");
         var req = $.ajax({
             'url': '/app/data/tweets.json',
             'type': 'GET',
             'dataType': 'JSON',
             success: function(msg) {
-                ok('Twits recuperados: ' + msg.statuses.length, msg)
+                console.log("AJAX OK");
+                ok('Twits recuperados', $.JSONParse(msg));
             },
             error: function() {
-                nok("No se han obtenido los twits")
+                console.log("AJAX NOK");
+                nok('No se han obtenido los twits');
             }
 
         });
 
-    }
+    };
 
     return {
         getTweets: getTweets

@@ -34,7 +34,9 @@ define('controller', ['data', 'services', 'ui'], function(db, srv, ui) {
     };
 
     var processTwitsAndSave = function(log, data) {
-
+        console.log('processTwitsAndSave');
+        console.log(log);
+        console.log(data);
         var tweets = [];
         if (data && data.statuses && data.statuses.length > 0) {
             var tw;

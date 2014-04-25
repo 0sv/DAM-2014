@@ -1,4 +1,5 @@
-define(['controller'], function(ctrl) {
+define('app', ['controller'], function(controller) {
+
     'use strict';
     console.log('App started');
 
@@ -10,5 +11,6 @@ define(['controller'], function(ctrl) {
     var ok = function(log) {
         console.log('Ok: ' + log);
     };
-    ctrl.getTweetsFromTwitter(ok, nok);
+
+    controller.getTweetsFromTwitter(ok, nok);
 });
