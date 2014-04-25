@@ -1,4 +1,4 @@
-define('events', ['jquery', 'controller'], function($, ctrl) {
+define('events', ['quo', 'controller'], function($, ctrl) {
     'use strict';
 
     var callbackNok = function(log) {

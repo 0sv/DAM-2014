@@ -1,4 +1,4 @@
-define('services', ['jquery'], function($) {
+define('services', ['quo'], function($) {
 
     var getTweets = function(apikey, ok, nok) {
         var tws = [];

@@ -1,4 +1,4 @@
-define('ui', ['jquery', 'handlebars'], function($, Handlebars) {
+define('ui', ['quo', 'handlebars'], function($, Handlebars) {
     'use strict';
     var showTweets = function(twit) {
 
