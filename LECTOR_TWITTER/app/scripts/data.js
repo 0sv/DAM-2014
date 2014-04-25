@@ -1,4 +1,5 @@
 define('data', ['ydn-db'], function(ydn) {
+    'use strict';
     console.log('Data module started');
 
     var dbName = 'TwitterDB',
@@ -23,11 +24,12 @@ define('data', ['ydn-db'], function(ydn) {
             keyPath: keyPath
         }, tweets);
         req.done(function(e) {
-            console.log("DATABASE RECORDS");
-            success("DB Ok ", e);
+            console.log('DATABASE RECORDS');
+            // datosCambiados();
+            success('DB Ok', e);
         });
         req.fail(function(e) {
-            error("DB ERROR: " + e);
+            error('DB ERROR: ' + e);
         });
     };
 
@@ -35,6 +37,18 @@ define('data', ['ydn-db'], function(ydn) {
         var req = db.get(tweetTable, id);
         req.done(success);
         req.fail(error);
+    };
+
+    var getAllTweet = function(id, success, error) {
+        var req = db.values(tweetTable);
+        req.done(function(e) {
+            console.log('DATABASE ALL RECORDS');
+            success('DB Ok', e);
+        });
+        req.fail(function(e) {
+            console.log('DATABASE ERROR ON GET ALL RECORDS');
+            error('DB ERROR: ' + e);
+        });
     };
 
     var updateTweet = function(tweet, success, error) {
@@ -70,12 +84,21 @@ define('data', ['ydn-db'], function(ydn) {
         req.fail(error);
     };
 
+    var datosCambiados = function() {
+
+        var event = new Event('datachange');
+
+        document.dispatchEvent(event);
+        console.log('EVENTO LANZADO');
+    };
+
     return {
         addTweet: addTweet,
         addTweets: addTweets,
         getTweet: getTweet,
         updateTweet: updateTweet,
         removeTweet: removeTweet,
-        clear: clear
+        clear: clear,
+        getAllTweet: getAllTweet
     };
 });
