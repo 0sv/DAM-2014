@@ -1,4 +1,4 @@
-define('app', ['controller'], function(controller) {
+define('app', ['controller', 'data', 'lungo', 'quo'], function(controller, data, lungo, $) {
 
     'use strict';
     console.log('App started');
